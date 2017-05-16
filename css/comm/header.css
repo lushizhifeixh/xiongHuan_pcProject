@@ -133,6 +133,7 @@
 	height: 36px;
 	float: left;
 	outline: none;
+	border:none;
 }
 #logo .shead-search .shead-input .shead_icon{
 	color: #fff;
@@ -180,11 +181,11 @@
 }
 /*mynav01*/
 #nav .mynav01{
-	width: 200px;
+	position: relative;
+	width: 220px;
 	float: left;
 	height: 40px;
 	background: #cd660b;
-
 }
 #nav .mynav01 span{
 	font-size: 15px;
@@ -197,6 +198,9 @@
 #nav .mynav01 .position{
 	border: 2px solid #c46e25;
 	display: none;
+	position: absolute;
+	z-index: 999;
+	width: 215px;
 }
 #nav .mynav01 .position .plist{
 	margin: 9px 0 8px 25px;

@@ -20,12 +20,17 @@ $(".mynav01").hover(function(){
 	$(this).find(".position").show();
 },function(){
 	$(this).find(".position").hide();
-});
+ });
+// $("#oSpan").hover(function(){
+// 	$(this).next().show();
+// },function(){
+// 	$(this).next().hide();
+// });
 // 吸顶菜单
 // 登录
 // 注册
 //购物车
 
 
- });////header_html
+ });//header_html
 

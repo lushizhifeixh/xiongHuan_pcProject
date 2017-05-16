@@ -11,7 +11,7 @@
 #banner #imgs{
 	list-style: none;
 	position: absolute;
-	background: red;
+	/*background: red;*/
 
 }
 #banner #imgs li{
@@ -342,6 +342,40 @@
 	width:100%;
 	background: #fff;	
 }
+/*楼梯导航侧边栏部分*/
+#aside_bar{
+	position:fixed;
+	left:0;
+	top:200px;
+	width: 30px;
+	border:1px solid #999;
+	display:none;
+} 
+
+#aside_bar li{
+	position: relative;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-bottom: 1px solid #999;
+}
+
+#aside_bar li span{
+	position: absolute;
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: red;
+	display:none;
+}
+#aside_bar li:last-child span{
+	background: #ccc;
+}
+
+/*楼梯*/
 #content{
 	
 	height:3100px;
@@ -349,12 +383,8 @@
 	margin:0 auto;	
 	width:1210px;
 	font-size: 14px;
-	/*border:1px solid #f00;*/
 }
-	/*content-product*/
-/*#content #content-product{
-	height:716px;	
-}*/
+	
 	/*top*/
 		/*content-product*/
 #content-product #top{
