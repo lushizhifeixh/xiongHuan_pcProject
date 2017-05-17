@@ -23,13 +23,226 @@
 	padding-top:9px;
 	
 }
+
 #left_nav #register_user,#left_nav #login_user{
 	color:#e77817;
+	cursor:pointer;
 }
 #left_nav span a{
 	
 	color:#2d9c37;
 }
+/*登录页面*/
+#alert_login,#alert_register{
+	display:none;
+}
+#box{
+		width: 310px;
+		height: 340px;
+		background: #ffff00 url(/imgs/login/logo_codebg.png) no-repeat right bottom;
+		
+		
+		padding:20px;
+}	
+
+#box .first-ul li:nth-of-type(1) i{
+	font-size:16px;
+	color:#555;
+	font-style: normal;
+	font-weight: bold;
+}
+#box .first-ul li:nth-of-type(1) a{
+	color:#c56c0e;
+	font-size:12px;
+	float:right;
+}
+#box .first-ul li:nth-of-type(2){
+	background: #fff6d2;
+	width: 300px;
+	height: 30px;
+	color:#555;
+	font-size:12px;
+	font-weight: bold;
+	border:1px solid #ffe57d;
+	text-align: center;
+	line-height: 30px;
+}
+#box .first-ul li:nth-of-type(3),#box .first-ul li{
+	margin-bottom: 13px;
+}
+#box .first-ul li:nth-of-type(3),#box .first-ul li:nth-of-type(4){
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:#919191;
+	font-size:12px;
+	border:1px solid #bdbdbd;
+}
+#box .first-ul li:nth-of-type(3) i,#box .first-ul li:nth-of-type(4) i{
+	width: 39px;
+	height: 39px;
+	display: inline-block;
+	float: left;
+	background: #f3f3f3;
+	border-right: 1px solid #dbdbdb;
+	text-align: center;
+	line-height: 3px;
+}
+#box .first-ul li:nth-of-type(3) input,#box .first-ul li:nth-of-type(4) input{
+	outline: none;
+	width: 260px;
+	height: 39px;
+	float:right;
+	border: none;
+	text-align: center;
+}
+#box .first-ul li:nth-of-type(5){
+	color:#000;
+}
+#box .first-ul li:nth-of-type(5) span{
+	color:#666;
+
+	display: block;
+	float: right;
+	margin-top:25px;
+}
+#box .first-ul li:nth-of-type(6) input{
+	background: #ff8b1e;
+	width: 300px;
+	height: 40px;
+	border: none;
+	outline: none;
+	color:#fff;
+	font-weight: bold;
+	font-size:15px;
+}
+#box .pay-way p{
+	color:#999;
+	font-size:13px;
+	margin-bottom: 8px;
+}
+#box .pay-way ul  li{
+	box-sizing: border-box;
+	width: 88px;
+	height: 28px;
+	background: #fbfbfb;
+	color:#666;
+	font-size:13px;
+	text-align: center;
+	line-height: 28px;
+	float: left;
+	margin-right: 6px;
+}
+#box .pay-way ul  li:hover{
+	border:1px solid #999;
+}
+/*登录页面*/
+/*注册页面*/
+#login-left{
+	width: 400px;
+	height: 440px;
+	border-right:1px solid #e6e6e6;
+	float:left;
+	/*background: #fff;*/
+	margin:20px 50px;
+
+}
+/*#login #login-left ul li:not(:nth-of-type(5)),#login #login-left ul li:not(:nth-of-type(6))*/
+/*#login #login-left ul li:not(:nth-of-type(5),:nth-of-type(6)) */
+#login-left ul li{
+	position:relative;
+	width: 400px;
+	height: 50px;
+	border:1px solid #e6e6e6;
+	margin-bottom:35px;
+	font-size:13px;
+	position: relative;
+	background: #fff;
+}
+#login-left ul .ckbox{
+	background: none;
+}
+#login-left ul li span{
+	display: inline-block;
+	width: 130px;
+	line-height: 50px;
+	text-align: center;
+	color:#555;
+	float:left;
+}
+#login-left ul li input{
+	outline:none;
+	color:#999;
+	line-height: 50px;
+	width: 265px;
+	height:50px;
+	float:right;
+	border:none;
+}
+
+#login-left ul li p{
+	color:red;
+	position: absolute;
+	left:30px;
+	top:60px;
+	/*display: none;*/
+	/*background: red;
+	width:300px;
+	height: 30px;*/
+}
+#login-left ul li b{
+	/*width: 100px;*/
+	height: 50px;
+	/*background: red;*/
+	display: inline-block;
+	position: absolute;
+	right:-25px;
+	line-height: 50px;
+
+}
+/*ck---box*/
+#login-left ul .ckbox{
+	width: 400px;
+	height: 18px;
+	border:none;
+	/*background: red;*/
+}
+#login-left ul .ckbox .ckbox-input{
+		width: 16px;
+		height: 16px;
+		float:left;
+	/*	background: blue;*/
+/*		overflow: hidden;
+*/
+
+}
+#login-left ul .ckbox i{
+	color:#e4863b;
+	font-style: normal;
+}
+
+
+/*login-btn*/
+
+
+#login-left ul .login-btn{
+	border:none;
+	width: 0;
+	height: 0;
+	position: relative;
+}
+
+ #login-left ul .login-btn input{
+	width: 400px;
+	height: 50px;
+	background: #ff6900;
+	border:none;
+	float:left;
+	color:#fff;
+	font-size:16px;
+}
+/*注册页面*/
 /*right_nav*/
 #right_nav{
 	box-sizing:border-box;

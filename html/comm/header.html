@@ -2,13 +2,110 @@
 			<div id="head_nav">
 				<div id="left_nav">
 					<span id="helo">你好&nbsp;&nbsp;请&nbsp;</span>
-					<a href="" target="_self"  id="register_user">[登录]&nbsp;&nbsp;</a>
-					<a href="" target="_self" id="login_user">[注册有惊喜]&nbsp;&nbsp;</a>
+					<!-- <a href="/html/funct/login.html" target="_self"  id="register_user">[登录]&nbsp;&nbsp;</a> -->
+					<a  target="_self"  id="login_user">[登录]&nbsp;&nbsp;</a>
+
+					<a  target="_self" id="register_user">[注册有惊喜]&nbsp;&nbsp;</a>
 					<span>
 						<i>长沙</i>&nbsp;&nbsp;<img src="imgs/header/add_change.png" alt="">&nbsp;&nbsp;
 						<a href="" title="满49元免邮">[满49元免邮]</a>
 					</span>
 				</div>
+		<!-- 登录页面 -->
+		<div id="alert_login" >
+				<div id="box"><!-- box -->
+					<ul class="first-ul">
+					<li>
+						<i>搜农坊会员登录</i>
+						<a href="" target="_blank"> 立即注册</a>
+					</li>
+					<li>公共场所不建议自动登录，以防账号丢失</li>
+					<li>
+						
+						<i></i>
+						<input type="text" placeholder="请输入用户名" id="username">
+					</li>
+
+					<span id="login_info"></span>
+					<br>
+					<li>
+						<i></i>
+						<input type="password" placeholder="请输入密码" id="password">
+					</li>	
+					<li>
+						<input type="radio">自动登录
+						<span>忘记密码？</span>
+					</li>
+					<li>
+						<input type="submit" value="登录" id="btnLogin" style="cursor:pointer">
+					</li>				
+				</ul>
+				<div class="pay-way">
+					<p>合作网站账户登录:</p>
+					<ul>
+						<li>
+							<i></i>
+							微信登录
+						</li>
+						<li>
+							<i></i>
+							QQ登录
+						</li>
+						<li>
+							<i></i>
+							支付宝
+						</li>
+					</ul>
+				</div>
+
+		</div><!-- box -->
+	</div>
+		<!-- 登录页面  -->
+		<!-- 注册页面 -->
+				<div id="alert_register">
+					<div id="login-left"><!-- login-left" -->
+						<ul>
+							<li>
+								<span>用户名</span>
+								<input type="text" placeholder="输入用户名" id="username" value="">
+								
+								<p id="p-use"></p>
+								<b id="lg_info"></b>
+							</li>
+							<li>
+								<span>设置密码</span>
+								<input type="password" placeholder="请输入密码" id="password">
+								<p></p>
+							</li>
+							<li>
+								<span>确认密码</span>
+								<input type="password" placeholder="请输入确认密码" id="password">
+								<p></p>
+							</li>
+							<li>
+								<span>验证码</span>
+								<input type="text" placeholder="请输入验证码">
+								<p></p>
+							</li>
+
+
+
+							<li class="ckbox">
+								<input type="checkbox" value="1" class="ckbox-input">
+								我已阅读并同意
+								<i>《搜农用户注册协议》</i>
+							</li>
+
+
+
+							<li class="login-btn">
+								<input type="button" value="立即注册" id="btnRegister" style="cursor:pointer">
+							</li>
+						</ul>
+						<div id="register_info"></div>
+					</div><!-- login-left" -->
+				</div>
+		<!-- 注册页面 -->
 				<div id="right_nav">
 					<div class="right_subnav subnav1">
 						<span>我的订单&nbsp;&nbsp;&nbsp;<img src="imgs/header/select_down.png" alt="">&nbsp;&nbsp;&nbsp;</span>
