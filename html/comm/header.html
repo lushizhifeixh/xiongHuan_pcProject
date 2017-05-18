@@ -12,30 +12,34 @@
 				</div>
 	
 		<!-- 注册页面 -->
+		<form action="">
 				<div id="alert_register">
 					<div id="login-left"><!-- login-left" -->
 						<ul>
 							<li>
 								<span>用户名</span>
-								<input type="text" placeholder="输入用户名" id="username_register" >
-								
-								<p id="p-use"></p>
+								<input type="text" placeholder="输入用户名" id="username_register" required>
+								<!--  -->
+								<p id="p_use" >*用户名由6-20位(字母、数字、下划线)组成,只能以字母开头</p>
 								<b id="lg_info"></b>
 							</li>
 							<li>
 								<span>设置密码</span>
-								<input type="password" placeholder="请输入密码" id="password_register">
-								<p></p>
+								<input type="password" placeholder="请输入密码" id="password_register" required>
+								<p id="p_pwd" >*密码输入错误,不能少于6个字符</p>
+								<b id="r_pwd"></b>
 							</li>
 							<li>
 								<span>确认密码</span>
-								<input type="password" placeholder="请输入确认密码" >
-								<p></p>
+								<input type="password" placeholder="请输入确认密码" id="password_regin" required>
+								<p id="r_pwd" >*两次密码输入不一致</p>
+								<b id="r_sucs"></b>
 							</li>
 							<li>
 								<span>验证码</span>
-								<input type="text" placeholder="请输入验证码">
-								<p></p>
+								<input type="text" placeholder="请输入验证码" id="pwd_test" required>
+								<p id="y_error" >*验证码错误</p>
+								<b id="y_sucs"></b>
 							</li>
 
 
@@ -55,6 +59,7 @@
 						<div id="register_info"></div>
 					</div><!-- login-left" -->
 				</div>
+		</form>
 		<!-- 注册页面 -->
 				<div id="right_nav">
 					<div class="right_subnav subnav1">

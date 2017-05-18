@@ -55,22 +55,101 @@ $("#register_user").on("click",function(){
 		zIndex:500,
 	});
 	
-})
+});
+/* 正则验证*/
+
+// 用户名校验
+// function userTest(){
+// 	var reg=/^[a-zA-Z]\w{5,19}$/;
+// 	var val=$("#username_register").val();
+// 	var rst=reg.test(val);
+// 	return rst;
+// }
+// // 密码名校验
+// function pwdTest(){
+// 	var reg=/^[a-zA-Z0-9]{6,}$/;
+// 	var val=$("#password_register").val();
+// 	var rst=reg.test(val);
+// 	return rst;
+// }
 // ajax注册验证用户名
+// $("#username_register").blur(function(){	
+// 	var userVal=userTest(),
+// 		pwdVal=pwdTest();
+	// $.getJSON("./php/user.php",{username:$(this).val()},function(data){		 
+	// 	if(data.status===1){
+	// 		$("#lg_info").text("×用户名已经被注册").css({
+	// 			color:"red"
+	// 		})
+	// 	}else{
+	// 		$("#lg_info").text("√").css({
+	// 			color:"green",
+	// 			fontSize:"20px"
+	// 		});		
+	// 	}		
+	// });	
+// })
+
+/*ajax注册验证用户名*/ 
 $("#username_register").blur(function(){
-	$.getJSON("./php/user.php",{username:$(this).val()},function(data){
-		 
-		if(data.status===1){
-			$("#p-use").text("用户名已经被注册")
-		}else{
-			$("#lg_info").text("√").css({
-				color:"green",
-				fontSize:"20px"
-			})
-		}
-	});	
-})
-//点击注册按钮保存信息到服务器
+	 var reg=/^[a-zA-Z]\w{5,19}$/;
+	 if(reg.test($(this).val())){
+	 	// $("#p_use").hide();
+		$.getJSON("./php/user.php",{username:$(this).val()},function(data){		 
+		    if(data.status===1){
+				$("#lg_info").text("×用户名已经被注册").css({
+					color:"red"
+				});
+			}else{
+				$("#lg_info").text("√").css({
+					color:"green",
+					fontSize:"20px"
+				});		
+			}		
+		});	
+	}else{
+		$("#p_use").show();
+	 }	
+});
+/*验证密码*/
+$("#password_register").on("blur",function(){
+	var reg=/^\w{6,}$/;
+	if(reg.test($(this).val())){
+		$("#r_pwd").text("√").css({
+			color:"green",
+			fontSize:"20px"
+		});		
+		$("#p_pwd").hide();
+	}else{
+		$("#p_pwd").show();
+	}
+});
+/*验证密码是否一致*/
+$("#password_regin").on("blur",function(){
+	 if(!($(this).val()===$("#password_register").val())){
+		$("#zr_pwd").show();
+	 }else{
+	 	$("#r_sucs").text("√").css({
+			color:"green",
+			fontSize:"20px"
+		});		
+	 }
+	
+});
+/*表单点击的时候错误信息消失*/ 
+$("#username_register").click(function(){
+	$("#p_use").hide();
+});
+$("#password_register").click(function(){
+	$("#p_pwd").hide();
+});
+$("#password_regin").click(function(){
+	$("#zr_pwd").hide();
+});
+$("#pwd_test").click(function(){
+	$("#y_error").hide();
+});
+/*点击注册按钮保存信息到服务器*/
 	$("#btnRegister").on("click",function(){
 		$.post("./php/register.php",{username:$("#username_register").val(),password:$("#password_register").val()},function(data){
 			if(data.status===1){
