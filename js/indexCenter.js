@@ -1,14 +1,15 @@
-$("#content_html").load("/html/comm/allcontent.html",function(){//content_html
-	$(function(){//ready
-		// 1左右轮播图
+$(function(){//ready
+	$("#center_html").load("html/indexCenter.html",function(){//center
+		
+		/*1左右轮播图*/
 
-		// 2秒杀
+		/* 2秒杀*/
 
-		//3. 上下轮播图
+		/*3. 上下轮播图*/
 
-		// 4.加入购物车
+		/* 4.加入购物车*/
 
-		//5.楼梯导航
+		/*5.楼梯导航*/
 		var height=$(".floor:first").offset().top,
 			winHeight=$(window).height(),
 			autoScroll=false;
@@ -32,7 +33,7 @@ $("#content_html").load("/html/comm/allcontent.html",function(){//content_html
 				}
 			});
 		});//
-		/* 鼠标移动导航 li 显示汉字：事件委派 */
+		// 鼠标移动导航 li 显示汉字：事件委派
 		$("#aside_bar").on("mouseenter","li",function(){
 			$(this).find("span").show();
 		}).on("mouseleave","li",function(){
@@ -58,7 +59,7 @@ $("#content_html").load("/html/comm/allcontent.html",function(){//content_html
 		})
 
 
-		//6添加到购物车的显示/隐藏
+		/*6添加到购物车的显示/隐藏*/
 		$("a").hover(function(){
 			$(this).find(".shop-cart").stop().animate({
 				bottom:"6px"
@@ -68,17 +69,6 @@ $("#content_html").load("/html/comm/allcontent.html",function(){//content_html
 				bottom:"-30px"
 			},1000/6)
 		});
-		// 
-
-
-
-
-
-
-
-
-
-	})//ready
-	
-
-});//content_html
+		
+	});//center
+})//ready
