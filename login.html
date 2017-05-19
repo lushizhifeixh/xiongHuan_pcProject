@@ -25,13 +25,12 @@
 					<i></i>
 					<input type="text" placeholder="请输入用户名" id="username">
 				</li>
-
-				<span id="login_info"></span>
-				<br>
 				<li>
 					<i></i>
 					<input type="password" placeholder="请输入密码" id="password">
 				</li>	
+				<span id="login_info" >用户名或密码错误，请请重试！</span>
+				<br>
 				<li>
 					<input type="radio">自动登录
 					<span>忘记密码？</span>
@@ -65,6 +64,7 @@
 	
 </body>
 <script src="js/lib/jquery/jquery-1.12.4.min.js"></script>
+<script src="js/lib/jquery/jquery.cookie.js"></script>
 <script src="js/header_footer.js"></script>
 </html>
 

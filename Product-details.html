@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情页</title>
+	<link rel="stylesheet" type="text/css" href="css/resert.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/product-details.css"/>
+	<style>
+		#gallery_01 img{border:2px solid white;}
+		.active img{border:2px solid #333 !important;}
+	</style>
+</head>
+<body>
+	<div id="head-html"></div>
+	<!-- details详情 -->
+	<div id="wrap-details"><!--wrap-details -->
+		<div id="details"><!--details -->
+<!-- 放     大      镜 -->
+		<div id="dt-glass" class="fl">
+			<img id="img_01" src="img/c01.jpg" data-zoom-image="img/l01.jpg">
+			<div id="glass-bt">	
+				<a href="#" data-image="img/c01.jpg" data-zoom-image="img/l01.jpg">
+					<img id="img_01" src="img/s01.jpg" alt="">
+				</a>
+				<a href="#" data-image="img/c02.jpg" data-zoom-image="img/l02.jpg">
+					<img id="img_01" src="img/s02.jpg" alt="">
+				</a>
+				<a href="#" data-image="img/c03.jpg" data-zoom-image="img/l03.jpg">
+					<img id="img_01" src="img/s03.jpg" alt="">
+				</a>
+				<a href="#" data-image="img/c04.jpg" data-zoom-image="img/l04.jpg">
+					<img id="img_01" src="img/s04.jpg" alt="">
+				</a>
+				<a href="#" data-image="img/c05.jpg" data-zoom-image="img/l05.jpg">
+					<img id="img_01" src="img/s05.jpg" alt="">
+				</a>
+			</div>
+				
+		</div>
+ 
+
+
+<!-- 放     大      镜 -->
+
+			<div id="dt-product" class="fl"><!--dt-product -->
+				<h2>郴州绿野东江鱼礼包（500g）</h2>
+				<div class="pct-01"><!--pct-01-->
+					<ul class="fl">
+						<li>
+							<span>价格</span>
+							<s>￥45.80</s>
+						</li>
+						<li>
+							<span>直供价</span>
+							<i>
+								￥38.00
+								<b>节省7.80元</b>
+							</i>
+						</li>
+					</ul>
+					<div class="pct-01rt fr">
+						<p>
+							<a href="">成功交易</a>
+							<span>5</span>
+						</p>
+						<p class="plast">
+							<a href="">累计评价</a>
+							<span>3</span>
+						</p>
+						<div class="tr"></div>
+					</div>
+				</div><!--pct-01-->
+				<div class="pct-02"><!--pct-02-->
+					<ul>
+						<li>
+                             <span>运费</span>
+                             <i>全国满49元包邮</i>
+						</li>
+						<li>
+							<span>净含量</span>
+                            <b>全国满49元包邮</b>
+						</li>
+						<li>
+							<span>单价</span>
+                            <b>0.08元/g</b>
+						</li>
+						<li>
+							<span>购买数量</span>
+                            <b>  件  库存9999件</b>
+						</li>
+						<li>
+							<span>温馨提示</span>
+                            <b>  请及时食用</b>
+						</li>
+					</ul>
+
+				</div><!--pct-02-->
+				<div class="pct-03"><!--pct-03-->
+					<p>
+						<a href="">立即购买</a>
+						<a href="" class="cart">加入购物车</a>
+					</p>
+					<p>
+						分享
+						<span> 收藏商品（193人）</span>
+					</p>
+				</div><!--pct-03-->
+			</div><!--dt-product -->
+
+
+
+
+
+			<div id="dt-mode" class="fr"><!--dt-mode -->
+				<h2>长沙总仓</h2>
+				<i>
+					<a href="">返回首页</a>
+					<a href="">搜农坊首页</a>
+				</i>
+				<p>自提地址：麓谷企业广场F4栋3楼</p>
+				<ul>
+					<li>
+						<img src="img/pdetail_icon01.png" alt="">
+						<p>产地直供</p>
+					</li>
+					<li>
+						<img src="img/pdetail_icon02.png" alt="">
+						<p>无忧售后</p>
+					</li>
+					<li>
+						<img src="img/pdetail_icon03.png" alt="">
+						<p>特色土货</p>
+					</li>
+				</ul>
+
+			</div><!--dt-mode -->
+		</div><!--details -->
+	</div><!--wrap-details -->
+
+	<div id="end-html"></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/homePage.js"></script>
+<script type="text/javascript" src="js/jquery.elevateZoom-2.2.3.min.js"></script>
+<script type="text/javascript">
+$(function(){//wrap
+	$("#head-html").load("html/public-head.html");
+	$("#end-html").load("html/public_end.html");
+// 放大镜
+	$("#img_01").elevateZoom({
+		gallery:"glass-bt",
+		cursor:"pointer",
+		galleryActiveClass:"active",
+		imageCrossfade:true,
+		loadingIcon:"http"
+	});
+	$("#img_01").bind("click",function(e){
+		var ez = $("#img_01").data("elevateZoom");
+		$.fancybox(ez.getGalleryList());
+		return false;
+	});
+// 放大镜
+});//wrap
+</script>
+</html>

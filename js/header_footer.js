@@ -22,7 +22,7 @@ $(".mynav01").hover(function(){
 	$(this).find(".position").hide();
  });
 // 吸顶菜单
-//注册
+/*注册页面*/
 $("#register_user").on("click",function(){
 	$("#alert_register").css({
 		display:"block",
@@ -56,40 +56,8 @@ $("#register_user").on("click",function(){
 	});
 	
 });
+
 /* 正则验证*/
-
-// 用户名校验
-// function userTest(){
-// 	var reg=/^[a-zA-Z]\w{5,19}$/;
-// 	var val=$("#username_register").val();
-// 	var rst=reg.test(val);
-// 	return rst;
-// }
-// // 密码名校验
-// function pwdTest(){
-// 	var reg=/^[a-zA-Z0-9]{6,}$/;
-// 	var val=$("#password_register").val();
-// 	var rst=reg.test(val);
-// 	return rst;
-// }
-// ajax注册验证用户名
-// $("#username_register").blur(function(){	
-// 	var userVal=userTest(),
-// 		pwdVal=pwdTest();
-	// $.getJSON("./php/user.php",{username:$(this).val()},function(data){		 
-	// 	if(data.status===1){
-	// 		$("#lg_info").text("×用户名已经被注册").css({
-	// 			color:"red"
-	// 		})
-	// 	}else{
-	// 		$("#lg_info").text("√").css({
-	// 			color:"green",
-	// 			fontSize:"20px"
-	// 		});		
-	// 	}		
-	// });	
-// })
-
 /*ajax注册验证用户名*/ 
 $("#username_register").blur(function(){
 	 var reg=/^[a-zA-Z]\w{5,19}$/;
@@ -126,8 +94,8 @@ $("#password_register").on("blur",function(){
 });
 /*验证密码是否一致*/
 $("#password_regin").on("blur",function(){
-	 if(!($(this).val()===$("#password_register").val())){
-		$("#zr_pwd").show();
+	 if($(this).val()!==$("#password_register").val()){
+		$("#diff").show();
 	 }else{
 	 	$("#r_sucs").text("√").css({
 			color:"green",
@@ -136,6 +104,17 @@ $("#password_regin").on("blur",function(){
 	 }
 	
 });
+
+
+//http://route.showapi.com/26-4?showapi_appid=33237&showapi_sign=ee80a64dcd7f43e488e748df7f27f5d3&border=&border_color=105
+
+/*图片验证码*/ 
+
+// $("#pic_change").on("click",function(){
+// 	$.getJSON("",{},function(){
+
+// 	});
+// });
 /*表单点击的时候错误信息消失*/ 
 $("#username_register").click(function(){
 	$("#p_use").hide();
@@ -144,7 +123,7 @@ $("#password_register").click(function(){
 	$("#p_pwd").hide();
 });
 $("#password_regin").click(function(){
-	$("#zr_pwd").hide();
+	$("#diff").hide();
 });
 $("#pwd_test").click(function(){
 	$("#y_error").hide();
@@ -154,6 +133,8 @@ $("#pwd_test").click(function(){
 		$.post("./php/register.php",{username:$("#username_register").val(),password:$("#password_register").val()},function(data){
 			if(data.status===1){
 				window.location="login.html"
+			}else{
+				$('#regist_error').show();
 			}
 			console.log(data);
 			console.log($("#username_register").val())
@@ -161,9 +142,26 @@ $("#pwd_test").click(function(){
 		
 	});
 
-//注册
+/*用户登录*/
+$("#btnLogin").click(function(){
+	$.post("php/login.php",{username:$("#username").val(),password:$("#password").val()},function(data){
+			if(data.status===1){
+				var user = data.userinfo;
+				$.cookie.json = true;
+				$.cookie('loginuser', user, {expires:7, path:'/'});
+				alert('登录成功! '+user.username+' 欢迎回来!');
+			 	window.location = "index.html";
+			}else{
+				$("#login_info").show();
+		}				
+	},"json");
+});
+$("#password,#username").on("click",function(){
+	$("#login_info").hide();
+});
+/*回到页面并显示用户名*/
+/*购物车*/
 
-//购物车
 });//header_html
 })//ready
 // -------------------footer_js------------------

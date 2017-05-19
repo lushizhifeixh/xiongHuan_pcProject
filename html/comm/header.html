@@ -32,12 +32,14 @@
 							<li>
 								<span>确认密码</span>
 								<input type="password" placeholder="请输入确认密码" id="password_regin" required>
-								<p id="r_pwd" >*两次密码输入不一致</p>
+								<p id="diff">*两次密码输入不一致</p>
 								<b id="r_sucs"></b>
 							</li>
-							<li>
+							<li class="last_text">
 								<span>验证码</span>
 								<input type="text" placeholder="请输入验证码" id="pwd_test" required>
+								<img src="" alt="" id="pic_yan">
+								<i id="pic_change">看不清,换一张？</i>
 								<p id="y_error" >*验证码错误</p>
 								<b id="y_sucs"></b>
 							</li>
@@ -50,13 +52,14 @@
 								<i>《搜农用户注册协议》</i>
 							</li>
 
-
-
+							<i id="regist_error">*用户注册失败,请联系客服!</i>
+				
 							<li class="login-btn">
 								<input type="submit" value="立即注册" id="btnRegister" style="cursor:pointer">
 							</li>
+
 						</ul>
-						<div id="register_info"></div>
+						<!-- <div id="register_info"></div> -->
 					</div><!-- login-left" -->
 				</div>
 		</form>

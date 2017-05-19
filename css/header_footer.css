@@ -73,10 +73,25 @@
 	line-height: 50px;
 	width: 265px;
 	height:50px;
-	float:right;
+	float:left;
 	border:none;
 }
-
+#login-left ul .last_text input{
+	width: 130px;
+}
+#login-left ul .last_text img{
+	width:138px;
+/*	background: blue;*/
+	height:50px;
+	display:inline-block;
+	float:left;
+}
+#login-left ul .last_text i{
+	float:right;
+	cursor:pointer;
+	color:#054b7f;
+	font-style:normal;
+}
 #login-left ul li p{
 	color:red;
 	position: absolute;
@@ -98,6 +113,7 @@
 
 }
 /*ck---box*/
+
 #login-left ul .ckbox{
 	width: 400px;
 	height: 18px;
@@ -197,6 +213,19 @@
 #right_nav .subnav2 i{
 	font-style:normal;
 	color:#d59761;
+}
+#regist_error{
+	color:red;
+	list-style: none;
+	font-size: 14px;
+	line-height:20px;
+	display: none;
+}
+#login_info{
+	float:right;
+	margin-right:20px;
+	color:red;
+	display: none;
 }
 /*logo*/
 #logo{
